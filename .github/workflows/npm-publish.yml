@@ -94,7 +94,7 @@ jobs:
 
       - name: Publish npm
         if: steps.meta.outputs.published == 'false'
-        run: npm publish --provenance
+        run: npm publish --provenance --access public
 
       - name: Create or update GitHub release
         if: steps.meta.outputs.published == 'false'
