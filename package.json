@@ -1,0 +1,49 @@
+{
+  "name": "pi-theme-flip",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Pi package adding a non-blocking command to toggle light and dark themes",
+  "license": "MIT",
+  "homepage": "https://github.com/adstastic/pi-theme-flip#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adstastic/pi-theme-flip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adstastic/pi-theme-flip/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "theme",
+    "dark-mode",
+    "light-mode"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "npm run build",
+    "prepublishOnly": "npm run check"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.74.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}
